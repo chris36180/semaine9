@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            .trash {
+                display: none;
+            }
+            .selected {
+                background-color:#add9f4;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="texte" id="texte">
+        <button onclick="ajouterElement()" id="ajouter">Ajouter</button>
+        <ul onclick="select(e)" id="liste"></ul>
+        <button onclick="annuler()" id="annuler">Annuler</button>
+        <button onclick="listRemove()" id="supprimer">Supprimer</button>
+        <button onclick="listDisplay()" id="restaurer">Restaurer</button>
+        <script>
+            var $texte = document.getElementById("texte");
+            var $liste = document.getElementById("liste");
+            var $supprimer = document.getElementById("supprimer");
+            var $restaurer = document.getElementById("restaurer");
+            
+            var tableau = ["Mickey","Donald","Dingo"];
+            
+            function afficherListe() {
+                var elem = "";
+                for (var i = 0; i < tableau.length; i++) {
+                    elem += "<li>" + tableau[i] + "</li>";
+                }
+                $liste.innerHTML = elem;
+            }
+            
+            function ajouterElement() {
+                tableau.push($texte.value);
+                afficherListe();
+                $texte.value = '';
+            }
+    
+            function annuler() {
+                tableau.pop();
+                afficherListe();
+            }
+            
+            function select(e) {
+                e.target.classList.toggle("selected");
+            }
+            
+            function supprimer() {
+                for (i = 0; i < $liste.children.length; i++) {
+                    if ($liste.children[i].classList.contains("selected")) {
+                        $liste.children[i].classList.add("trash");
+                    }
+                }
+            }
+            
+            function restaurer() {
+                for (i = 0; i < $liste.children.length; i++) {
+                    $liste.children[i].classList.remove("trash");
+                    $liste.children[i].classList.remove("selected");
+                }
+            }
+            
+            afficherListe();
+            $liste.onclick = select;
+            $supprimer.onclick = supprimer;
+            $restaurer.onclick = restaurer;
+        </script>
+    </body>
+</html>
