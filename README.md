@@ -3,6 +3,7 @@ cette semaine 3 exercices:
 
 
 #Exercice 1:
+http://htmlpreview.github.io/?https://github.com/chris36180/semaine9/blob/master/Exo1/index.html
 
 ##Étape 1 : afficher un contact
 
@@ -13,6 +14,7 @@ cette semaine 3 exercices:
 
 
 #Exercice 2:
+http://htmlpreview.github.io/?https://github.com/chris36180/semaine9/blob/master/Exo2/index.html
 
 ##Étape 1 : afficher un tableau sous forme de liste
 
@@ -25,6 +27,7 @@ cette semaine 3 exercices:
 
 
 #Exercice 3:
+http://htmlpreview.github.io/?https://github.com/chris36180/semaine9/blob/master/Exo3/index.html
 
 ##Étape 1 : bouton de suppression
 
