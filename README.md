@@ -1,4 +1,7 @@
 # semaine9
+
+#liens badges codacademy:https://www.codecademy.com/fr/users/gavaud36/achievements
+
 cette semaine 3 exercices:
 
 
